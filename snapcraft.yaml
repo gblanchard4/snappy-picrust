@@ -16,7 +16,7 @@ parts:
             - python-cogent
             - zlib1g-dev
             - python-dev
-            - numpy
+            - python-numpy
     picrust:
         plugin: python2
         source: https://github.com/picrust/picrust.git
