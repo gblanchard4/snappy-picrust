@@ -14,3 +14,5 @@ parts:
         source-type: git
         stage-packages:
             - python-numpy
+            - python-dev
+            - zlib1g-dev
