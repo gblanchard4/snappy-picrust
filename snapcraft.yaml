@@ -24,7 +24,7 @@ parts:
             - python-cogent
             - zlib1g-dev
         after:
-            - python-dev
+            - pythondev
             - numpy
     picrust:
         plugin: python2
