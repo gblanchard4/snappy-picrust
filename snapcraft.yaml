@@ -8,12 +8,20 @@ apps:
         command: print_picrust_config.py
 
 parts:
+    pythondev:
+        plugin: python2
+        stage-packages:
+            - python-dev
+    numpy:
+        plugin: python2
+        stage-packages:
+            - python-numpy
+    cogent:
+        plugin: python2
+        stage-packages:
+            - python-cogent
+            - zlib1g-dev
     picrust:
         plugin: python2
         source: https://github.com/picrust/picrust.git
         source-type: git
-        stage-packages:
-            - python-dev
-            - python-numpy
-            - python-cogent
-            - zlib1g-dev
