@@ -12,4 +12,5 @@ parts:
         plugin: python2
         source: https://github.com/picrust/picrust.git
         source-type: git
-        stage-packages: python-numpy
+        stage-packages:
+            - python-numpy
