@@ -1,5 +1,33 @@
 name: PICRUSt
 version: 1
 summary: PICRUSt: Phylogenetic Investigation of Communities by Reconstruction of Unobserved States
-description: PICRUSt (pronounced “pie crust”) is a bioinformatics software package designed to predict metagenome functional content from marker gene (e.g., 16S rRNA) surveys and full genomes. PICRUSt is freely available under the GPL.
+description: PICRUSt (pronounced “pie crust”) is a bioinformatics software package designed to predict metagenome functional content from marker gene (e.g., 16S rRNA) surveys and full genomes. PICRUSt is freely available under the GPL.'PICRUSt: Phylogenetic Investigation of Communities by Reconstruction of Unobserved States\n\nPredictive functional profiling of microbial communities using 16S rRNA marker gene sequences. Langille, M. G.I.*; Zaneveld, J.*; Caporaso, J. G.; McDonald, D.; Knights, D.; a Reyes, J.; Clemente, J. C.; Burkepile, D. E.; Vega Thurber, R. L.; Knight, R.; Beiko, R. G.; and Huttenhower, C. Nature Biotechnology, 1-10. 8 2013.
 
+apps:
+    picrust:
+        command: ancestral_state_reconstruction.py
+        command: categorize_by_function.py
+        command: compare_biom.py
+        command: evaluate_test_datasets.py
+        command: format_tree_and_trait_table.py
+        command: make_test_datasets.py
+        command: metagenome_contributions.py
+        command: normalize_by_copy_number.py
+        command: parallel_predict_traits.py
+        command: pool_test_datasets.py
+        command: predict_metagenomes.py
+        command: predict_traits.py
+        command: print_picrust_config.py
+        command: run_genome_evaluations.py
+        command: scale_metagenome.py
+        command: start_parallel_jobs.py
+        command: start_parallel_jobs_sge.py
+        command: start_parallel_jobs_torque.py
+
+
+parts:
+    picrust:
+        plugin: python2
+        source: https://github.com:picrust/picrust.git
+        source-type: git
+        build-packages:
