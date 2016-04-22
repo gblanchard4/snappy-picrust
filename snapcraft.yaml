@@ -13,6 +13,7 @@ parts:
         source: https://github.com/picrust/picrust.git
         source-type: git
         stage-packages:
-            - python-numpy
             - python-dev
+            - python-numpy
+            - python-cogent
             - zlib1g-dev
