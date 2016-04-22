@@ -18,10 +18,16 @@ parts:
             - python-numpy
     cogent:
         plugin: python2
+        source: https://github.com/pycogent/pycogent.git
+        source-type: git
         stage-packages:
             - python-cogent
             - zlib1g-dev
+        after:
+            - python-dev
+            - numpy
     picrust:
         plugin: python2
         source: https://github.com/picrust/picrust.git
         source-type: git
+            - cogent
