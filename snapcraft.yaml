@@ -16,4 +16,7 @@ parts:
             - python-cogent
             - zlib1g-dev
             - python-dev
-            - python-numpy
+        after: make-numpy
+    make-numpy:
+        plugin: make-numpy
+        source: .
