@@ -12,10 +12,9 @@ parts:
         plugin: python2
         source: https://github.com/picrust/picrust.git
         source-type: git
-        stage-packages:
-            - python-cogent
-            - zlib1g-dev
-            - python-dev
-            - python-cython
-            - python-scipy
-        after: make
+        after: numpy
+
+    numpy:
+        plugin: python2
+        source: https://github.com/numpy/numpy/archive/v1.5.1.tar.gz
+        source-type: tar
