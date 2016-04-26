@@ -8,18 +8,12 @@ apps:
         command: print_picrust_config.py
 
 parts:
-    cogent:
+    picrust:
         plugin: python2
-        source: https://github.com/pycogent/pycogent.git
+        source: https://github.com/picrust/picrust.git
         source-type: git
         stage-packages:
             - python-cogent
             - zlib1g-dev
             - python-dev
             - python-numpy
-    picrust:
-        plugin: python2
-        source: https://github.com/picrust/picrust.git
-        source-type: git
-        after:
-            - cogent
