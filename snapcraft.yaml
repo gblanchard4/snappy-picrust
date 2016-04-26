@@ -10,11 +10,19 @@ apps:
 parts:
     picrust:
         plugin: python2
-        source: https://github.com/picrust/picrust.git
+        source: snappy https://github.com/picrust/picrust.git
         source-type: git
-        after: numpy
+        after:
+            - numpy
 
     numpy:
         plugin: python2
         source: https://github.com/numpy/numpy/archive/v1.5.1.tar.gz
         source-type: tar
+        build-packages:
+            - gcc
+            - gfortran
+            - python-dev
+            - libblas-dev
+            - liblapack-dev
+            - cython
