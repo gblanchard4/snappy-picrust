@@ -18,5 +18,5 @@ parts:
             - python-dev
         after: make-numpy
     make-numpy:
-        plugin: make-numpy
+        plugin: make
         source: .
