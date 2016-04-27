@@ -20,10 +20,10 @@ parts:
         source: https://github.com/numpy/numpy/archive/v1.5.1.tar.gz
         source-type: tar
         build-packages:
-            - build-essential
             - gcc
             - gfortran
-            - python-dev
             - libblas-dev
             - liblapack-dev
             - cython
+        configflags:
+            - --with-includepath=/usr/lib/include/python
