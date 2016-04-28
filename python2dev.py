@@ -92,12 +92,19 @@ class Python2devPlugin(snapcraft.BasePlugin):
             #     root, 'usr', 'include')),
             # 'CFLAGS="-I{} $CFLAGS"'.format(os.path.join(
             #     root, 'usr', 'include')),
-            'CPPFLAGS=" $CPPFLAGS -I{} -I{} "'.format(
+            #'CPPFLAGS=" $CPPFLAGS -I{} -I{} "'.format(
+            #    os.path.join(root, 'usr', 'include'),
+            #    os.path.join(root, 'usr', 'include', 'python2.7')),
+            #'CFLAGS=" $CFLAGS -I{} -I{} "'.format(
+            #    os.path.join(root, 'usr', 'include'),
+            #    os.path.join(root, 'usr', 'include' 'python2.7')),
+            'CPPFLAGS=" -I{} -I{} "'.format(
                 os.path.join(root, 'usr', 'include'),
                 os.path.join(root, 'usr', 'include', 'python2.7')),
-            'CFLAGS=" $CFLAGS -I{} -I{} "'.format(
+            'CFLAGS="  -I{} -I{} "'.format(
                 os.path.join(root, 'usr', 'include'),
                 os.path.join(root, 'usr', 'include' 'python2.7')),
+
         ]
 
         # There's a chicken and egg problem here, everything run get's an
