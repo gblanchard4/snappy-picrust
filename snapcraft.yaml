@@ -9,15 +9,15 @@ apps:
 
 parts:
     picrust:
-        plugin: python2
+        plugin: python2dev
         source: https://github.com/picrust/picrust.git
         source-type: git
         build-packages:
-            - gcc
-            - gfortran
+            - build-essential
+            - python-dev
+            - libatlas-base-dev
             - libblas-dev
             - liblapack-dev
-            - cython
-            - python-dev
+            - gfortran
         python-packages:
             - numpy==1.5.1
