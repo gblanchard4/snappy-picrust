@@ -88,14 +88,16 @@ class Python2devPlugin(snapcraft.BasePlugin):
         # and then build in the build step or split out pulling
         # stage-packages in an internal private step.
         env = [
-            'CPPFLAGS="-I{} $CPPFLAGS"'.format(os.path.join(
-                root, 'usr', 'include')),
-            'CFLAGS="-I{} $CFLAGS"'.format(os.path.join(
-                root, 'usr', 'include')),
-            'CPPFLAGS="-I{} $CPPFLAGS"'.format(os.path.join(
-                root, 'usr', 'include', 'python2.7')),
-            'CFLAGS="-I{} $CFLAGS"'.format(os.path.join(
-                root, 'usr', 'include' 'python2.7')),
+            # 'CPPFLAGS="-I{} $CPPFLAGS"'.format(os.path.join(
+            #     root, 'usr', 'include')),
+            # 'CFLAGS="-I{} $CFLAGS"'.format(os.path.join(
+            #     root, 'usr', 'include')),
+             'CPPFLAGS=" $CPPFLAGS -I{} -I{} "'.format(
+                 os.path.join(root, 'usr', 'include'),
+                 os.path.join(root, 'usr', 'include', 'python2.7'),
+             'CFLAGS=" $CFLAGS -I{} -I{} "'.format(
+                 os.path.join(root, 'usr', 'include'),
+                 os.path.join(root, 'usr', 'include' 'python2.7')),
         ]
 
         # There's a chicken and egg problem here, everything run get's an
@@ -144,7 +146,8 @@ class Python2devPlugin(snapcraft.BasePlugin):
                        '--global-option=build_ext',
                        '--global-option=-I{}'.format(
                            _get_python2_include(self.installdir)),
-                       '--target', site_packages_dir]
+                       '--target', site_packages_dir
+                       ]
 
         if self.options.requirements:
             self.run(pip_install + ['--requirement', requirements])
