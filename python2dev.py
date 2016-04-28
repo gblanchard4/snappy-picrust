@@ -98,13 +98,6 @@ class Python2devPlugin(snapcraft.BasePlugin):
             #'CFLAGS=" $CFLAGS -I{} -I{} "'.format(
             #    os.path.join(root, 'usr', 'include'),
             #    os.path.join(root, 'usr', 'include' 'python2.7')),
-            'CPPFLAGS=" -I{} -I{} "'.format(
-                os.path.join(root, 'usr', 'include'),
-                os.path.join(root, 'usr', 'include', 'python2.7')),
-            'CFLAGS="  -I{} -I{} "'.format(
-                os.path.join(root, 'usr', 'include'),
-                os.path.join(root, 'usr', 'include' 'python2.7')),
-
         ]
 
         # There's a chicken and egg problem here, everything run get's an
@@ -178,12 +171,19 @@ class Python2devPlugin(snapcraft.BasePlugin):
             return
 
         os.makedirs(common.get_python2_path(self.installdir), exist_ok=True)
+        # self.run(
+        #     ['python2', setup_file,
+        #      'build_ext', '-I{}'.format(_get_python2_include(self.installdir)),
+        #      'install', '--install-layout=deb',
+        #      '--prefix={}/usr'.format(self.installdir),
+        #      ], cwd=self.builddir)
         self.run(
             ['python2', setup_file,
-             'build_ext', '-I{}'.format(_get_python2_include(self.installdir)),
+             'build_ext', '-I{}'.format(root, 'usr', 'include' 'python2.7'),
              'install', '--install-layout=deb',
              '--prefix={}/usr'.format(self.installdir),
              ], cwd=self.builddir)
+
 
     def snap_fileset(self):
         fileset = super().snap_fileset()
