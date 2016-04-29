@@ -12,5 +12,7 @@ parts:
         plugin: python2dev
         source: https://github.com/picrust/picrust.git
         source-type: git
+        build-packages:
+            - cython
         python-packages:
-            - numpy==1.5.1
+            - numpy==1.11

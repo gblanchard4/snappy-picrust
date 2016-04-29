@@ -1,0 +1,376 @@
+Pulling picrust 
+From https://github.com/picrust/picrust
+ * branch            HEAD       -> FETCH_HEAD
+Already up-to-date.
+python2 /home/gene/Code/picrust-snap/parts/picrust/install/usr/bin/easy_install --prefix /home/gene/Code/picrust-snap/parts/picrust/install/usr pip
+Searching for pip
+Best match: pip 8.1.1
+Processing pip-8.1.1-py2.7.egg
+pip 8.1.1 is already the active version in easy-install.pth
+Installing pip script to /home/gene/Code/picrust-snap/parts/picrust/install/usr/bin
+Installing pip2.7 script to /home/gene/Code/picrust-snap/parts/picrust/install/usr/bin
+Installing pip2 script to /home/gene/Code/picrust-snap/parts/picrust/install/usr/bin
+
+Using /home/gene/Code/picrust-snap/parts/picrust/install/usr/lib/python2.7/dist-packages/pip-8.1.1-py2.7.egg
+Processing dependencies for pip
+Finished processing dependencies for pip
+python2 /home/gene/Code/picrust-snap/parts/picrust/install/usr/bin/pip2 install --global-option=build_ext --global-option=-I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/python2.7 --target /home/gene/Code/picrust-snap/parts/picrust/install/usr/lib/python2.7/site-packages --upgrade numpy==1.5.1
+/home/gene/Code/picrust-snap/parts/picrust/install/usr/lib/python2.7/dist-packages/pip-8.1.1-py2.7.egg/pip/commands/install.py:180: UserWarning: Disabling all use of wheels due to the use of --build-options / --global-options / --install-options.
+  cmdoptions.check_install_build_global(options)
+Collecting numpy==1.5.1
+  Using cached numpy-1.5.1.tar.gz
+Installing collected packages: numpy
+  Running setup.py install for numpy ... error
+    Complete output from command /home/gene/Code/picrust-snap/parts/picrust/install/usr/bin/python2 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-7cIvn5/numpy/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" build_ext -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/python2.7 install --record /tmp/pip-poadVY-record/install-record.txt --single-version-externally-managed --compile --home=/tmp/tmpRygXRa:
+    Running from numpy source directory.non-existing path in 'numpy/distutils': 'site.cfg'
+    F2PY Version 1
+    blas_opt_info:
+    blas_mkl_info:
+      libraries mkl,vml,guide not found in /home/gene/Code/picrust-snap/parts/picrust/install/usr/lib
+      libraries mkl,vml,guide not found in /usr/local/lib
+      libraries mkl,vml,guide not found in /usr/lib
+      NOT AVAILABLE
+
+    atlas_blas_threads_info:
+    Setting PTATLAS=ATLAS
+      libraries ptf77blas,ptcblas,atlas not found in /home/gene/Code/picrust-snap/parts/picrust/install/usr/lib
+      libraries ptf77blas,ptcblas,atlas not found in /usr/local/lib
+      libraries ptf77blas,ptcblas,atlas not found in /usr/lib/atlas-base
+      libraries ptf77blas,ptcblas,atlas not found in /usr/lib
+      NOT AVAILABLE
+
+    atlas_blas_info:
+      libraries f77blas,cblas,atlas not found in /home/gene/Code/picrust-snap/parts/picrust/install/usr/lib
+      libraries f77blas,cblas,atlas not found in /usr/local/lib
+      FOUND:
+        libraries = ['f77blas', 'cblas', 'atlas']
+        library_dirs = ['/usr/lib/atlas-base']
+        language = c
+        include_dirs = ['/usr/include/atlas']
+
+    customize GnuFCompiler
+    Could not locate executable g77
+    Found executable /usr/bin/f77
+    gnu: no Fortran 90 compiler found
+    gnu: no Fortran 90 compiler found
+    customize IntelFCompiler
+    Could not locate executable ifort
+    Could not locate executable ifc
+    customize LaheyFCompiler
+    Could not locate executable lf95
+    customize PGroupFCompiler
+    Could not locate executable pgf90
+    Could not locate executable pgf77
+    customize AbsoftFCompiler
+    Could not locate executable f90
+    absoft: no Fortran 90 compiler found
+    absoft: no Fortran 90 compiler found
+    customize NAGFCompiler
+    Found executable /usr/bin/f95
+    customize VastFCompiler
+    customize CompaqFCompiler
+    Could not locate executable fort
+    customize IntelItaniumFCompiler
+    Could not locate executable efort
+    Could not locate executable efc
+    customize IntelEM64TFCompiler
+    customize Gnu95FCompiler
+    Found executable /usr/bin/gfortran
+    customize Gnu95FCompiler
+    customize Gnu95FCompiler using config
+    compiling '_configtest.c':
+
+    /* This file is generated from numpy/distutils/system_info.py */
+    void ATL_buildinfo(void);
+    int main(void) {
+      ATL_buildinfo();
+      return 0;
+    }
+
+    C compiler: x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fno-strict-aliasing -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/includepython2.7 -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/x86_64-linux-gnu -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/python2.7 -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/x86_64-linux-gnu -fPIC
+
+    compile options: '-c'
+    x86_64-linux-gnu-gcc: _configtest.c
+    x86_64-linux-gnu-gcc -pthread _configtest.o -L/usr/lib/atlas-base -lf77blas -lcblas -latlas -o _configtest
+    ATLAS version 3.10.2 built by buildd on Mon Nov 23 23:12:07 UTC 2015:
+       UNAME    : Linux lgw01-49 3.19.0-33-generic #38 14.04.1-Ubuntu SMP Fri Nov 6 18:17:28 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux
+       INSTFLG  : -1 0 -a 1 -l 1
+       ARCHDEFS : -DATL_OS_Linux -DATL_ARCH_x86SSE2 -DATL_CPUMHZ=2095 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664
+       F2CDEFS  : -DAdd_ -DF77_INTEGER=int -DStringSunStyle
+       CACHEEDGE: 1048576
+       F77      : /usr/bin/gfortran, version GNU Fortran (Ubuntu 5.2.1-24ubuntu3) 5.2.1 20151121
+       F77FLAGS : -fomit-frame-pointer -mfpmath=sse -O2 -msse2 -fPIC -m64
+       SMC      : /usr/bin/gcc, version gcc (Ubuntu 5.2.1-24ubuntu3) 5.2.1 20151121
+       SMCFLAGS : -fomit-frame-pointer -mfpmath=sse -O2 -msse2 -fPIC -m64
+       SKC      : /usr/bin/gcc, version gcc (Ubuntu 5.2.1-24ubuntu3) 5.2.1 20151121
+       SKCFLAGS : -fomit-frame-pointer -mfpmath=sse -O2 -msse2 -fPIC -m64
+    success!
+    removing: _configtest.c _configtest.o _configtest
+      FOUND:
+        libraries = ['f77blas', 'cblas', 'atlas']
+        library_dirs = ['/usr/lib/atlas-base']
+        language = c
+        define_macros = [('ATLAS_INFO', '"\\"3.10.2\\""')]
+        include_dirs = ['/usr/include/atlas']
+
+    lapack_opt_info:
+    lapack_mkl_info:
+    mkl_info:
+      libraries mkl,vml,guide not found in /home/gene/Code/picrust-snap/parts/picrust/install/usr/lib
+      libraries mkl,vml,guide not found in /usr/local/lib
+      libraries mkl,vml,guide not found in /usr/lib
+      NOT AVAILABLE
+
+      NOT AVAILABLE
+
+    atlas_threads_info:
+    Setting PTATLAS=ATLAS
+      libraries ptf77blas,ptcblas,atlas not found in /home/gene/Code/picrust-snap/parts/picrust/install/usr/lib
+      libraries lapack_atlas not found in /home/gene/Code/picrust-snap/parts/picrust/install/usr/lib
+      libraries ptf77blas,ptcblas,atlas not found in /usr/local/lib
+      libraries lapack_atlas not found in /usr/local/lib
+      libraries ptf77blas,ptcblas,atlas not found in /usr/lib/atlas-base
+      libraries ptf77blas,ptcblas,atlas not found in /usr/lib
+    numpy.distutils.system_info.atlas_threads_info
+      NOT AVAILABLE
+
+    atlas_info:
+      libraries f77blas,cblas,atlas not found in /home/gene/Code/picrust-snap/parts/picrust/install/usr/lib
+      libraries lapack_atlas not found in /home/gene/Code/picrust-snap/parts/picrust/install/usr/lib
+      libraries f77blas,cblas,atlas not found in /usr/local/lib
+      libraries lapack_atlas not found in /usr/local/lib
+      libraries lapack not found in /usr/lib/atlas-base
+    numpy.distutils.system_info.atlas_info
+      FOUND:
+        libraries = ['lapack', 'f77blas', 'cblas', 'atlas']
+        library_dirs = ['/usr/lib/atlas-base/atlas', '/usr/lib/atlas-base']
+        language = f77
+        include_dirs = ['/usr/include/atlas']
+
+    customize GnuFCompiler
+    gnu: no Fortran 90 compiler found
+    gnu: no Fortran 90 compiler found
+    customize IntelFCompiler
+    customize LaheyFCompiler
+    customize PGroupFCompiler
+    customize AbsoftFCompiler
+    absoft: no Fortran 90 compiler found
+    absoft: no Fortran 90 compiler found
+    customize NAGFCompiler
+    customize VastFCompiler
+    customize CompaqFCompiler
+    customize IntelItaniumFCompiler
+    customize IntelEM64TFCompiler
+    customize Gnu95FCompiler
+    customize Gnu95FCompiler
+    customize Gnu95FCompiler using config
+    compiling '_configtest.c':
+
+    /* This file is generated from numpy/distutils/system_info.py */
+    void ATL_buildinfo(void);
+    int main(void) {
+      ATL_buildinfo();
+      return 0;
+    }
+
+    C compiler: x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fno-strict-aliasing -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/includepython2.7 -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/x86_64-linux-gnu -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/python2.7 -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/x86_64-linux-gnu -fPIC
+
+    compile options: '-c'
+    x86_64-linux-gnu-gcc: _configtest.c
+    x86_64-linux-gnu-gcc -pthread _configtest.o -L/usr/lib/atlas-base/atlas -L/usr/lib/atlas-base -llapack -lf77blas -lcblas -latlas -o _configtest
+    ATLAS version 3.10.2 built by buildd on Mon Nov 23 23:12:07 UTC 2015:
+       UNAME    : Linux lgw01-49 3.19.0-33-generic #38 14.04.1-Ubuntu SMP Fri Nov 6 18:17:28 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux
+       INSTFLG  : -1 0 -a 1 -l 1
+       ARCHDEFS : -DATL_OS_Linux -DATL_ARCH_x86SSE2 -DATL_CPUMHZ=2095 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664
+       F2CDEFS  : -DAdd_ -DF77_INTEGER=int -DStringSunStyle
+       CACHEEDGE: 1048576
+       F77      : /usr/bin/gfortran, version GNU Fortran (Ubuntu 5.2.1-24ubuntu3) 5.2.1 20151121
+       F77FLAGS : -fomit-frame-pointer -mfpmath=sse -O2 -msse2 -fPIC -m64
+       SMC      : /usr/bin/gcc, version gcc (Ubuntu 5.2.1-24ubuntu3) 5.2.1 20151121
+       SMCFLAGS : -fomit-frame-pointer -mfpmath=sse -O2 -msse2 -fPIC -m64
+       SKC      : /usr/bin/gcc, version gcc (Ubuntu 5.2.1-24ubuntu3) 5.2.1 20151121
+       SKCFLAGS : -fomit-frame-pointer -mfpmath=sse -O2 -msse2 -fPIC -m64
+    success!
+    removing: _configtest.c _configtest.o _configtest
+      FOUND:
+        libraries = ['lapack', 'f77blas', 'cblas', 'atlas']
+        library_dirs = ['/usr/lib/atlas-base/atlas', '/usr/lib/atlas-base']
+        language = f77
+        define_macros = [('ATLAS_INFO', '"\\"3.10.2\\""')]
+        include_dirs = ['/usr/include/atlas']
+
+    running build_ext
+    running build_src
+    build_src
+    building py_modules sources
+    building library "npymath" sources
+    customize GnuFCompiler
+    gnu: no Fortran 90 compiler found
+    gnu: no Fortran 90 compiler found
+    customize IntelFCompiler
+    customize LaheyFCompiler
+    customize PGroupFCompiler
+    customize AbsoftFCompiler
+    absoft: no Fortran 90 compiler found
+    absoft: no Fortran 90 compiler found
+    customize NAGFCompiler
+    customize VastFCompiler
+    customize CompaqFCompiler
+    customize IntelItaniumFCompiler
+    customize IntelEM64TFCompiler
+    customize Gnu95FCompiler
+    customize Gnu95FCompiler
+    customize Gnu95FCompiler using config
+    C compiler: x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fno-strict-aliasing -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/includepython2.7 -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/x86_64-linux-gnu -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/python2.7 -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/x86_64-linux-gnu -fPIC
+
+    compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/include -c'
+    x86_64-linux-gnu-gcc: _configtest.c
+    x86_64-linux-gnu-gcc -pthread _configtest.o -o _configtest
+    success!
+    removing: _configtest.c _configtest.o _configtest
+    C compiler: x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fno-strict-aliasing -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/includepython2.7 -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/x86_64-linux-gnu -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/python2.7 -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/x86_64-linux-gnu -fPIC
+
+    compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/include -c'
+    x86_64-linux-gnu-gcc: _configtest.c
+    _configtest.c:1:5: warning: conflicting types for built-in function ‘exp’
+     int exp (void);
+         ^
+    x86_64-linux-gnu-gcc -pthread _configtest.o -o _configtest
+    _configtest.o: In function `main':
+    /tmp/pip-build-7cIvn5/numpy/_configtest.c:6: undefined reference to `exp'
+    collect2: error: ld returned 1 exit status
+    _configtest.o: In function `main':
+    /tmp/pip-build-7cIvn5/numpy/_configtest.c:6: undefined reference to `exp'
+    collect2: error: ld returned 1 exit status
+    failure.
+    removing: _configtest.c _configtest.o
+    C compiler: x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fno-strict-aliasing -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/includepython2.7 -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/x86_64-linux-gnu -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/python2.7 -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/x86_64-linux-gnu -fPIC
+
+    compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/include -c'
+    x86_64-linux-gnu-gcc: _configtest.c
+    _configtest.c:1:5: warning: conflicting types for built-in function ‘exp’
+     int exp (void);
+         ^
+    x86_64-linux-gnu-gcc -pthread _configtest.o -lm -o _configtest
+    success!
+    removing: _configtest.c _configtest.o _configtest
+    building extension "numpy.core._sort" sources
+      adding 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/config.h' to sources.
+      adding 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/_numpyconfig.h' to sources.
+    executing numpy/core/code_generators/generate_numpy_api.py
+      adding 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/__multiarray_api.h' to sources.
+    numpy.core - nothing done with h_files = ['build/src.linux-x86_64-2.7/numpy/core/include/numpy/config.h', 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/_numpyconfig.h', 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/__multiarray_api.h']
+    building extension "numpy.core.multiarray" sources
+      adding 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/config.h' to sources.
+      adding 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/_numpyconfig.h' to sources.
+    executing numpy/core/code_generators/generate_numpy_api.py
+      adding 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/__multiarray_api.h' to sources.
+    numpy.core - nothing done with h_files = ['build/src.linux-x86_64-2.7/numpy/core/include/numpy/config.h', 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/_numpyconfig.h', 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/__multiarray_api.h']
+    building extension "numpy.core.umath" sources
+      adding 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/config.h' to sources.
+      adding 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/_numpyconfig.h' to sources.
+    executing numpy/core/code_generators/generate_ufunc_api.py
+      adding 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/__ufunc_api.h' to sources.
+      adding 'build/src.linux-x86_64-2.7/numpy/core/src/umath' to include_dirs.
+    numpy.core - nothing done with h_files = ['build/src.linux-x86_64-2.7/numpy/core/src/umath/funcs.inc', 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/config.h', 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/_numpyconfig.h', 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/__ufunc_api.h']
+    building extension "numpy.core.scalarmath" sources
+      adding 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/config.h' to sources.
+      adding 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/_numpyconfig.h' to sources.
+    executing numpy/core/code_generators/generate_numpy_api.py
+      adding 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/__multiarray_api.h' to sources.
+    executing numpy/core/code_generators/generate_ufunc_api.py
+      adding 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/__ufunc_api.h' to sources.
+    numpy.core - nothing done with h_files = ['build/src.linux-x86_64-2.7/numpy/core/include/numpy/config.h', 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/_numpyconfig.h', 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/__multiarray_api.h', 'build/src.linux-x86_64-2.7/numpy/core/include/numpy/__ufunc_api.h']
+    building extension "numpy.core._dotblas" sources
+      adding 'numpy/core/blasdot/_dotblas.c' to sources.
+    building extension "numpy.core.umath_tests" sources
+    building extension "numpy.core.multiarray_tests" sources
+    building extension "numpy.lib._compiled_base" sources
+    building extension "numpy.numarray._capi" sources
+    building extension "numpy.fft.fftpack_lite" sources
+    building extension "numpy.linalg.lapack_lite" sources
+      adding 'numpy/linalg/lapack_litemodule.c' to sources.
+      adding 'numpy/linalg/python_xerbla.c' to sources.
+    building extension "numpy.random.mtrand" sources
+    C compiler: x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fno-strict-aliasing -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/includepython2.7 -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/x86_64-linux-gnu -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/python2.7 -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/x86_64-linux-gnu -fPIC
+
+    compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/include -c'
+    x86_64-linux-gnu-gcc: _configtest.c
+    x86_64-linux-gnu-gcc -pthread _configtest.o -o _configtest
+    _configtest
+    failure.
+    removing: _configtest.c _configtest.o _configtest
+    building data_files sources
+    build_src: building npy-pkg config files
+    running build_clib
+    customize UnixCCompiler
+    customize UnixCCompiler using build_clib
+    building 'npymath' library
+    compiling C sources
+    C compiler: x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fno-strict-aliasing -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/includepython2.7 -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/x86_64-linux-gnu -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/python2.7 -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/x86_64-linux-gnu -fPIC
+
+    creating build/temp.linux-x86_64-2.7
+    creating build/temp.linux-x86_64-2.7/build
+    creating build/temp.linux-x86_64-2.7/build/src.linux-x86_64-2.7
+    creating build/temp.linux-x86_64-2.7/build/src.linux-x86_64-2.7/numpy
+    creating build/temp.linux-x86_64-2.7/build/src.linux-x86_64-2.7/numpy/core
+    creating build/temp.linux-x86_64-2.7/build/src.linux-x86_64-2.7/numpy/core/src
+    creating build/temp.linux-x86_64-2.7/build/src.linux-x86_64-2.7/numpy/core/src/npymath
+    compile options: '-Inumpy/core/include -Ibuild/src.linux-x86_64-2.7/numpy/core/include/numpy -Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/include -Ibuild/src.linux-x86_64-2.7/numpy/core/src/multiarray -Ibuild/src.linux-x86_64-2.7/numpy/core/src/umath -c'
+    x86_64-linux-gnu-gcc: build/src.linux-x86_64-2.7/numpy/core/src/npymath/ieee754.c
+    x86_64-linux-gnu-gcc: build/src.linux-x86_64-2.7/numpy/core/src/npymath/npy_math.c
+    x86_64-linux-gnu-gcc: build/src.linux-x86_64-2.7/numpy/core/src/npymath/npy_math_complex.c
+    x86_64-linux-gnu-gcc-ar: adding 3 object files to build/temp.linux-x86_64-2.7/libnpymath.a
+    customize UnixCCompiler
+    customize UnixCCompiler using build_ext
+    customize GnuFCompiler
+    gnu: no Fortran 90 compiler found
+    gnu: no Fortran 90 compiler found
+    customize IntelFCompiler
+    customize LaheyFCompiler
+    customize PGroupFCompiler
+    customize AbsoftFCompiler
+    absoft: no Fortran 90 compiler found
+    absoft: no Fortran 90 compiler found
+    customize NAGFCompiler
+    customize VastFCompiler
+    customize CompaqFCompiler
+    customize IntelItaniumFCompiler
+    customize IntelEM64TFCompiler
+    customize Gnu95FCompiler
+    customize Gnu95FCompiler
+    customize Gnu95FCompiler using build_ext
+    building 'numpy.core._sort' extension
+    compiling C sources
+    C compiler: x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fno-strict-aliasing -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/includepython2.7 -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/x86_64-linux-gnu -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/python2.7 -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/x86_64-linux-gnu -fPIC
+
+    compile options: '-Inumpy/core/include -Ibuild/src.linux-x86_64-2.7/numpy/core/include/numpy -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/python2.7 -I/usr/include/python2.7 -Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/include -c'
+    x86_64-linux-gnu-gcc: build/src.linux-x86_64-2.7/numpy/core/src/_sortmodule.c
+    creating build/lib.linux-x86_64-2.7
+    creating build/lib.linux-x86_64-2.7/numpy
+    creating build/lib.linux-x86_64-2.7/numpy/core
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security -L/home/gene/Code/picrust-snap/parts/picrust/install/lib -L/home/gene/Code/picrust-snap/parts/picrust/install/usr/lib -L/home/gene/Code/picrust-snap/parts/picrust/install/lib/x86_64-linux-gnu -L/home/gene/Code/picrust-snap/parts/picrust/install/usr/lib/x86_64-linux-gnu -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/includepython2.7 -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/x86_64-linux-gnu -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/python2.7 -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/x86_64-linux-gnu build/temp.linux-x86_64-2.7/build/src.linux-x86_64-2.7/numpy/core/src/_sortmodule.o -Lbuild/temp.linux-x86_64-2.7 -lm -o build/lib.linux-x86_64-2.7/numpy/core/_sort.so
+    building 'numpy.core.multiarray' extension
+    compiling C sources
+    C compiler: x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fno-strict-aliasing -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/includepython2.7 -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/x86_64-linux-gnu -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/python2.7 -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/x86_64-linux-gnu -fPIC
+
+    creating build/temp.linux-x86_64-2.7/numpy
+    creating build/temp.linux-x86_64-2.7/numpy/core
+    creating build/temp.linux-x86_64-2.7/numpy/core/src
+    creating build/temp.linux-x86_64-2.7/numpy/core/src/multiarray
+    compile options: '-Inumpy/core/include -Ibuild/src.linux-x86_64-2.7/numpy/core/include/numpy -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/python2.7 -I/usr/include/python2.7 -Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/include -c'
+    x86_64-linux-gnu-gcc: numpy/core/src/multiarray/multiarraymodule_onefile.c
+    numpy/core/src/multiarray/multiarraymodule_onefile.c:10:25: fatal error: scalartypes.c: No such file or directory
+    compilation terminated.
+    numpy/core/src/multiarray/multiarraymodule_onefile.c:10:25: fatal error: scalartypes.c: No such file or directory
+    compilation terminated.
+    error: Command "x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fno-strict-aliasing -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/includepython2.7 -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/x86_64-linux-gnu -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/python2.7 -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/x86_64-linux-gnu -fPIC -Inumpy/core/include -Ibuild/src.linux-x86_64-2.7/numpy/core/include/numpy -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/python2.7 -I/usr/include/python2.7 -Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/include -c numpy/core/src/multiarray/multiarraymodule_onefile.c -o build/temp.linux-x86_64-2.7/numpy/core/src/multiarray/multiarraymodule_onefile.o" failed with exit status 1
+
+    ----------------------------------------
+Command "/home/gene/Code/picrust-snap/parts/picrust/install/usr/bin/python2 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-7cIvn5/numpy/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" build_ext -I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/python2.7 install --record /tmp/pip-poadVY-record/install-record.txt --single-version-externally-managed --compile --home=/tmp/tmpRygXRa" failed with error code 1 in /tmp/pip-build-7cIvn5/numpy/
+Command '['/bin/sh', '/tmp/tmp3yl2oq78', 'python2',
+'/home/gene/Code/picrust-snap/parts/picrust/install/usr/bin/pip2',
+'install', '--global-option=build_ext', '--global-option=-I/home/gene/Code/picrust-snap/parts/picrust/install/usr/include/python2.7', '--target',
+'/home/gene/Code/picrust-
+snap/parts/picrust/install/usr/lib/python2.7/site-packages', '--
+upgrade', 'numpy==1.5.1']' returned non-zero exit status 1
