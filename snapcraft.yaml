@@ -5,14 +5,18 @@ description: PICRUSt (pronounced “pie crust”) is a bioinformatics software p
 
 apps:
     picrust:
-        command: print_picrust_config.py
+        command: usr/bin/print_picrust_config.py
 
 parts:
     picrust:
-        plugin: python2dev
+        plugin: python2numpy
         source: https://github.com/picrust/picrust.git
         source-type: git
-        build-packages:
-            - cython
+        # stage-packages:
+        #     - python-dev
+        #     - build-essential
+        #     - libatlas-base-dev
+        #     - gfortran
         python-packages:
-            - numpy==1.11
+            - numpy==1.5.1
+            - scipy

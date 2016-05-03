@@ -85,25 +85,25 @@ class Python2Plugin(snapcraft.BasePlugin):
         # and then build in the build step or split out pulling
         # stage-packages in an internal private step.
         env = [
-            'CPPFLAGS="-I{} -I{} $CPPFLAGS"'.format(
-                os.path.join(root, 'usr', 'include'),
-                os.path.join(root, 'usr', 'include', 'python2.7')),
-            'CFLAGS="-I{} -I{} $CFLAGS"'.format(
-                os.path.join(root, 'usr', 'include'),
-                os.path.join(root, 'usr', 'include', 'python2.7')),
-            'ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future',
-            'LIBRARY_PATH={}'.format(
-                os.path.join(root, 'usr', 'include', 'python2.7')),
-            'LDFLAGS="-shared"',
+            # 'CPPFLAGS="-I{} -I{} $CPPFLAGS"'.format(
+                # os.path.join(root, 'usr', 'include'),
+                # os.path.join(root, 'usr', 'include', 'python2.7')),
+            # 'CFLAGS="-I{} -I{} $CFLAGS"'.format(
+                # os.path.join(root, 'usr', 'include'),
+                # os.path.join(root, 'usr', 'include', 'python2.7')),
+            # 'ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future',
+            # 'LIBRARY_PATH={}'.format(
+                # os.path.join(root, 'usr', 'include', 'python2.7')),
+            # 'LDFLAGS="-shared"',
         ]
 
         # There's a chicken and egg problem here, everything run get's an
         # env built, even package installation, so the first runs for these
         # will likely fail.
-        try:
-            env.append('PYTHONPATH={0}'.format(common.get_python2_path(root)))
-        except EnvironmentError as e:
-            logger.debug(e)
+        # try:
+        #     env.append('PYTHONPATH={0}'.format(common.get_python2_path(root)))
+        # except EnvironmentError as e:
+        #     logger.debug(e)
 
         return env
 
@@ -140,10 +140,10 @@ class Python2Plugin(snapcraft.BasePlugin):
 
         pip2 = os.path.join(self.installdir, 'usr', 'bin', 'pip2')
         pip_install = ['python2', pip2, 'install',
-                       '--global-option=build_ext',
-                       '--global-option=-I{}'.format(
-                           _get_python2_include(self.installdir)),
-                       '--no-clean',
+                    #    '--global-option=build_ext',
+                    #    '--global-option=-I{}'.format(
+                    #        _get_python2_include(self.installdir)),
+                    #    '--no-clean',
                        '--target', site_packages_dir]
 
         if self.options.requirements:
